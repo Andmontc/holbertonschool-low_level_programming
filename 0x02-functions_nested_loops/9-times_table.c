@@ -25,7 +25,7 @@ void times_table(void)
 			}
 			else
 			{
-				if (contador>=1)
+				if (contador >= 1)
 				{
 					_putchar(' ');
 					_putchar(num2 + 48);
