@@ -13,21 +13,18 @@
 int largest_number(int a, int b, int c)
 {
 	int largest;
-	int apos = abs(a);
-	int bpos = abs(b);
-	int cpos = abs(c);
 
-	if (apos > bpos && bpos > cpos)
+	if (a >= b && a >= c)
 	{
-		largest = apos;
+		largest = a;
 	}
-	else if (bpos > apos && apos > cpos)
+	else if (b >= a && b >= c)
 	{
-		largest = bpos;
+		largest = b;
 	}
 	else
 	{
-		largest = cpos;
+		largest = c;
 	}
 
 	return (largest);
