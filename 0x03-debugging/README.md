@@ -8,9 +8,9 @@ tasks
 
 - Like, comment, subscribe
 
--0 > 972
+- 0 > 972
 
--Leap Year
+- Leap Year
 
 **Author**
 
