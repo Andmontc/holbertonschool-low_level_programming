@@ -15,7 +15,7 @@ void more_numbers(void)
 				int num1 = num / 10;
 				int num2 = num % 10;
 
-				if (num > 9)
+				if (num1 != 0)
 					_putchar(num1 + 48);
 					_putchar(num2 + 48);
 			}
