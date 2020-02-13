@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
-* add - Entry point
-* @a: first number
-* @b: second number
-* Return: 0
+* _isupper - Entry point
+* @c: character to evaluate
+* Return: 1 uppercase, 0 if dont
 *
 */
 int _isupper(int c)
@@ -12,7 +11,7 @@ int _isupper(int c)
 
 	for (letra = 'A'; letra <= 'Z'; letra++)
 	{
-		if ( c == letra)
+		if (c == letra)
 			return (1);
 	}
 	return (0);
