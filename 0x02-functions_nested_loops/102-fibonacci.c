@@ -5,23 +5,23 @@
 */
 int main(void)
 {
-	double sum;
-	double num1 = 1;
-	double num2 = 2;
-	int x;
+	int count;
+	unsigned long num1 = 0, num2 = 1, sum;
 
-	printf("%.f,", num1);
-	printf(" %.f,", num2);
-
-	for (x = 0; x < 48; x++)
+	for (count = 0; count < 50; count++)
 	{
 		sum = num1 + num2;
+		printf("%lu", sum);
+
 		num1 = num2;
 		num2 = sum;
 
-		printf(" %.f,", sum);
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	printf("\n");
+
 	return (0);
 }
 
