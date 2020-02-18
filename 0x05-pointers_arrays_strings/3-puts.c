@@ -1,4 +1,3 @@
-#include <string.h>
 #include "holberton.h"
 /**
 * _puts- function that prints a string
