@@ -4,19 +4,15 @@
 *@str: string
 *
 */
+
 void puts2(char *str)
 {
+	int i;
 
-
-	while (*str != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (*str % 2 == 0)
-		{
-			_putchar(*str);
-		}
-	str++;
+		if (i % 2 == 0)
+			_putchar(str[i]);
 	}
-
-
-_putchar(10);
+	_putchar('\n');
 }
