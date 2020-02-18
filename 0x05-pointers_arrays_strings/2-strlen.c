@@ -1,4 +1,3 @@
-#include <string.h>
 #include "holberton.h"
 /**
 * _strlen - function that calculates lenght of a string
@@ -7,10 +6,12 @@
 */
 int _strlen(char *str)
 {
-	int lenght;
+	int i = 0;
 
-	lenght = strlen(str);
+	while (*str++)
+	{
+		i++;
+	}
 
-	return (lenght);
+return (i);
 }
-
