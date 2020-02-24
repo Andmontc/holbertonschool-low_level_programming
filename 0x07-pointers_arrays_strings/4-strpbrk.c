@@ -4,13 +4,13 @@
 * @accept: second string
 * Return: string with occurences
 */
-char *_strpbrk(char *s, char*accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
 
 	for (i = 0; s[i]; i++)
 	{
-		for ( j = 0; accept[j]; j++)
+		for (j = 0; accept[j]; j++)
 		{
 			if (s[i] == accept[j])
 			{
