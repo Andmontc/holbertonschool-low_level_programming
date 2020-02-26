@@ -18,7 +18,7 @@ int cuadrado(int n, int x)
 	{
 	return (x);
 	}
-	else if ((x * x) > n)
+	else if ((x * x) >= n)
 	{
 	return (-1);
 	}
