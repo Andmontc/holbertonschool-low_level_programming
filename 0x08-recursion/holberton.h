@@ -17,5 +17,7 @@ int _sqrt_recursion(int n);
 int cuadrado (int n, int x);
 int is_prime_number(int n);
 int primo(int n, int x);
+int is_palindrome(char *s);
+int compare(char *s, int f, int x);
 
 #endif
