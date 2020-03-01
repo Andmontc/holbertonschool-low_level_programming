@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	cents = atoi(argv[1]);
-	if (atoi(argv[1]) >= 0)
+	if (cents >= 0)
 	{
 		for (i = 0; i < 5; i++)
 		{
