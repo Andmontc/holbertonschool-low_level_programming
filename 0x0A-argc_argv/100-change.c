@@ -17,19 +17,15 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	cents = atoi(argv[1]);
-
-	for (i = 0; i < 5; i++)
+	if (atoi(argv[1]) >= 0)
 	{
-		if (cents < 0)
-	{
-		putchar('0');
-		putchar('\n');
-		break;
-	}
-		if (cents / coins[i])
+		for (i = 0; i < 5; i++)
 		{
-			cambio += cents / coins[i];
-			cents %= coins[i];
+			if (cents / coins[i])
+			{
+				cambio += cents / coins[i];
+				cents %= coins[i];
+			}
 		}
 	}
 printf("%d\n", cambio);
