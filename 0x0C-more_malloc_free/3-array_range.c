@@ -10,7 +10,7 @@
 int *array_range(int min, int max)
 {
 	int *anum;
-	int len, i;
+	int len, i, j = 0;
 
 	if (min > max)
 	{
@@ -22,9 +22,9 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < len; i++)
+	for (i = min; i <= max; i++, j++)
 	{
-		anum[i] = min++;
+		anum[j] = i;
 	}
 return (anum);
 }
