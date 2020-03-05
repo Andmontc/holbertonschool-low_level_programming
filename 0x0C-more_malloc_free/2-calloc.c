@@ -38,6 +38,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	p = _memset(p, 0, size);
+	_memset(p, 0, size*nmemb);
 	return (p);
 }
