@@ -18,26 +18,21 @@ int _strlen(char *str)
 return (i);
 }
 /**
-* *_strncpy - function that copies a string
-* @dest: array copied
-* @src: original array
-* @n: contador
-* Return: array
+**_strcpy-function that copy an array
+*@dest: variable that copy the array
+*@src: array to copy
+*Return: the array copied
 */
-char *_strncpy(char *dest, char *src, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int conts;
+	int i;
 
-	for (conts = 0; src[conts] != '\0'; conts++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		if (conts < n)
-		dest[conts] = src[conts];
+		dest[i] = src[i];
 	}
-	for (; conts < n; conts++)
-	{
-		dest[conts] = '\0';
-	}
-return (dest);
+	dest[i] = '\0';
+	return (dest);
 }
 /**
  * new_dog -  second entry
@@ -68,8 +63,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(nname);
 		return (NULL);
 	}
-	_strncpy(nname, name, lenname);
-	_strncpy(nowner, owner, lenowner);
+	_strcpy(nname, name);
+	_strcpy(nowner, owner);
 
 
 	doggo = malloc(sizeof(dog_t));
