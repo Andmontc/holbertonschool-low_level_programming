@@ -1,7 +1,44 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include "dog.h"
+/**
+* _strlen - function that calculates lenght of a string
+* @str: string
+* Return: the size  of the string
+*/
+int _strlen(char *str)
+{
+	int i = 0;
+
+	while (*str++)
+	{
+		i++;
+	}
+
+return (i);
+}
+/**
+* *_strncpy - function that copies a string
+* @dest: array copied
+* @src: original array
+* @n: contador
+* Return: array
+*/
+char *_strncpy(char *dest, char *src, int n)
+{
+	int conts;
+
+	for (conts = 0; src[conts] != '\0'; conts++)
+	{
+		if (conts < n)
+		dest[conts] = src[conts];
+	}
+	for (; conts < n; conts++)
+	{
+		dest[conts] = '\0';
+	}
+return (dest);
+}
 /**
  * new_dog -  second entry
  * @name: name of the dog
@@ -17,8 +54,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dog_t *doggo;
 
-	lenname = strlen(name);
-	lenowner = strlen(owner);
+	lenname = _strlen(name);
+	lenowner = _strlen(owner);
 
 	nname = malloc(lenname + 1);
 	if (nname == NULL)
@@ -31,8 +68,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(nname);
 		return (NULL);
 	}
-	strcpy(nname, name);
-	strcpy(nowner, owner);
+	_strncpy(nname, name, lenname);
+	_strncpy(nowner, owner, lenowner);
 
 
 	doggo = malloc(sizeof(dog_t));
