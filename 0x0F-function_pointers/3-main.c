@@ -14,11 +14,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2] == NULL)
-	{
-		printf("Error\n");
-		exit(98);
-	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
