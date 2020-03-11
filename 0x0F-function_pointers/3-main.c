@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error");
 		exit(98);
 	}
-	if (get_op_func[2][1] != 0)
+	if (argv[2][1] != 0)
 	{
 		printf("Error\n");
 		exit(99);
