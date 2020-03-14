@@ -4,6 +4,8 @@
  * @separator: strings separator
  * @n: number of strings
  */
+
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
@@ -12,7 +14,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(vastring, n);
 
-	for (i = 0; i < n && separator; i++)
+	if (separator == NULL)
+	{
+		separator = "";
+	}
+	for (i = 0; i < n; i++)
 	{
 		p = va_arg(vastring, char *);
 		printf("%s", p);
