@@ -3,7 +3,7 @@
  *free_list - function that frees the list
  * @head: list
  */
-void free_list(list_t *head);
+void free_list(list_t *head)
 {
 	int i;
 	list_t *ptr;
