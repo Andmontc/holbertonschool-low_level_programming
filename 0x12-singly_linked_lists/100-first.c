@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * mystartupfun - function before main
+ * myStartupFun - function before main
  */
-void mystartupfun(void)
+void myStartupFun(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
