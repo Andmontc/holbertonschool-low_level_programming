@@ -1,0 +1,21 @@
+#include "lists.h"
+/**
+ * print_listint - function that prints a number
+ * @h: struct
+ * Return: number of nodes
+ */
+size_t print_listint(const listint_t *h)
+{
+	int i;
+
+	if (!h)
+	{
+		return (0);
+	}
+	for (i = 0; h; i++)
+	{
+		printf("%s\n", h->n);
+		h->next;
+	}
+return (i);
+}
