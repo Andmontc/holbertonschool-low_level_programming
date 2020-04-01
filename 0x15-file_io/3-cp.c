@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int filefrom, fileto, r = 1024, w, cff, cft;
+	int filefrom, fileto, r = 1, w, cff, cft;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (fileto == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(99);
 
-	while (r == 1024)
+	while (r != 0)
 	{
 		r = read(filefrom, buffer, 1024);
 		if (r == -1)
