@@ -19,17 +19,17 @@ int main(int argc, char *argv[])
 
 	fileto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fileto == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(99);
 
 	while (r != 0)
 	{
-	r = read(filefrom, buffer, 1024);
-	if (r == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(98);
+		r = read(filefrom, buffer, 1024);
+		if (r == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]), exit(98);
 
-	w = write(fileto, buffer, r);
-	if (w == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		w = write(fileto, buffer, r);
+		if (w == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	cff = close(filefrom);
 	if (cff == -1)
