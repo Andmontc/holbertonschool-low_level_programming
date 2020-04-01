@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
 
 	filefrom = open(argv[1], O_RDONLY);
 	fileto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while (r)
+
+	while (r != 0)
 	{
 	r = read(filefrom, buffer, 1024);
 	w = write(fileto, buffer, r);
