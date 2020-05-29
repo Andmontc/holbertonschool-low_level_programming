@@ -31,14 +31,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	newele = malloc(sizeof(hash_node_t));
 	if (newele == NULL)
+		return (0);
+	newele->value = valcpy;
+	newele->key = strdup(key);
+	if (newele->key == NULL)
 	{
 		free(newele);
 		return (0);
 	}
-	newele->value = valcpy;
-	newele->key = strdup(key);
-	if (newele->key == NULL)
-		return (0);
 	newele->next = ht->array[index];
 	ht->array[index] = newele;
 	return (1);
