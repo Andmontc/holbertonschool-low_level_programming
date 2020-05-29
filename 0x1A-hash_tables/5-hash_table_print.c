@@ -7,7 +7,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *tmp;
 	unsigned int i;
-	unsigned char *flag_comma = 0;
+	unsigned char flag_comma = 0;
 
 	if (ht == NULL)
 		return;
@@ -27,7 +27,7 @@ void hash_table_print(const hash_table_t *ht)
 				if (tmp != NULL)
 					printf(", ");
 			}
-			flag_comma == 1;
+			flag_comma = 1;
 		}
 	}
 	printf("}\n");
