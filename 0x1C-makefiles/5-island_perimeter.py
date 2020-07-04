@@ -7,14 +7,15 @@ def island_perimeter(grid):
 
     height = len(grid)
     width = len(grid[0])
-    left = 0
-    below = 0
+    totalsquare = 0
+    edges = 0
 
     for row in range(height):
         for col in range(width):
             if grid[row][col] == 1:
-                if grid[row - 1][col] == 0:
-                    left += 1
-                if grid[row + 1][col] == 0:
-                    below += 1
-    return (left + below) * 2
+                totalsquare += 4
+                if row > 0 and grid[row - 1][col] == 1:
+                    edges += 2
+                if col > 0 and grid[row][col - 1] == 1:
+                    edges += 2
+    return (totalsquare - edges)
