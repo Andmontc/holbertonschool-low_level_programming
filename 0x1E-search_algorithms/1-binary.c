@@ -32,7 +32,7 @@ int binary_search_help(int *array, int start, int end, int value)
 		if (i == start)
 			printf(" %d", array[i]);
 		else
-			printf(" %d", array[i]);
+			printf(", %d", array[i]);
 	}
 	printf("\n");
 	if (end == start && value != array[start])
